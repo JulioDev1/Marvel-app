@@ -5,3 +5,8 @@ export const HomeContainer = styled.div`
   color: #ffff;
   padding: 30px;
 `;
+export const AllHqs = styled.div`
+  display: flex;
+  flex-direction: row;
+`;
+export const ContainerHq = styled.div``;
