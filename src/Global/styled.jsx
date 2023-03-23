@@ -10,6 +10,6 @@ export const GlobalStyles = createGlobalStyle`
         height:100%;
     }
     body{
-        background-color:#0E0E0E;
+        background-color:#202020;
     }
 `;

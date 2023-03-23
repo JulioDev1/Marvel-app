@@ -1,12 +1,23 @@
 import React from "react";
-import { Poster, Price, ProductConteiner, Title } from "./styled";
+import {
+  Poster,
+  Price,
+  ProductConteiner,
+  Title,
+  InfoContainer,
+  TitleContainer,
+} from "./styled";
 
 export const Products = ({ thumbnail, title, price, id }) => {
   return (
     <ProductConteiner key={id}>
       <Poster src={thumbnail} alt="poster" />
-      <Title>{title}</Title>
-      <Price>$ {price}</Price>
+      <InfoContainer>
+        <TitleContainer>
+          <Title>{title}</Title>
+        </TitleContainer>
+        <Price>$ {price}</Price>
+      </InfoContainer>
     </ProductConteiner>
   );
 };

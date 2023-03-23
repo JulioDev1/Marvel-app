@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const NavBarContainer = styled.div`
-  background-color: #000;
+  background-color: #131415;
   height: 20vh;
   width: 100%;
   display: flex;
@@ -18,7 +18,7 @@ export const SearchInput = styled.div`
 export const Input = styled.input`
   width: 90%;
   height: 40px;
-  background-color: #363636;
+  background-color: #202020;
   border: none;
   ::placeholder {
     font-family: "Francois One", sans-serif;

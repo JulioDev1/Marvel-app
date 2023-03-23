@@ -10,6 +10,7 @@ import {
 import Logo from "../../icon/Marvel-Comics-logo.png";
 import { Search } from "../../icon/Search";
 import { Cart } from "../../icon/Cart";
+
 export const NavBar = () => {
   return (
     <div>

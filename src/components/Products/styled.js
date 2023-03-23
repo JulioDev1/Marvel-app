@@ -8,12 +8,24 @@ export const ProductConteiner = styled.div`
 `;
 export const Price = styled.h1`
   color: #3ae541;
-  font-size: 20px;
+  font-size: 12px;
 `;
 export const Poster = styled.img`
   width: 190px;
   height: 250px;
 `;
 export const Title = styled.h1`
-  font-size: 20px;
+  font-size: 18px;
+`;
+export const TitleContainer = styled.div`
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  width: 100%;
+`;
+export const InfoContainer = styled.div`
+  margin-top: 14px;
 `;
