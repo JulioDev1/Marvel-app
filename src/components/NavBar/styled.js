@@ -18,12 +18,17 @@ export const SearchInput = styled.div`
 export const Input = styled.input`
   width: 90%;
   height: 40px;
+  font-family: "Francois One", sans-serif;
   background-color: #202020;
+  padding: 10px 16px 10px 13px;
   border: none;
+
+  color: #dbdbdb;
+
   ::placeholder {
     font-family: "Francois One", sans-serif;
     color: #dbdbdb;
-    padding: 10px 16px 10px 13px;
+    padding: 3px 4px 1px 1px;
   }
 `;
 export const LogoMarvel = styled.img`

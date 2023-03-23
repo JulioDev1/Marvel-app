@@ -11,10 +11,30 @@ export const AllHqs = styled.div`
   margin: 0px;
   gap: 20px;
 `;
-export const ContainerHq = styled.div`
+export const ContainerRareHq = styled.div`
+  display: flex;
+  align-content: center;
+  flex-wrap: wrap;
+  background-color: #3f3f3f;
+  flex-direction: column;
+  filter: drop-shadow(0px 0px 7px #000);
+  width: 400px;
+  border: #e53a40 2px solid;
+  border-radius: 10px;
+  margin-top: 100px;
+  padding: 10px;
+  gap: 22px;
+`;
+export const BannerContainer = styled.div`
+  width: 100%;
   display: flex;
   justify-content: center;
+`;
+export const ContainerHq = styled.div`
+  display: flex;
+  align-content: center;
   flex-direction: column;
+  width: 100%;
   margin-top: 100px;
   padding: 10px;
   gap: 22px;

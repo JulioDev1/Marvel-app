@@ -1,12 +1,21 @@
 import axios from "axios";
 import md5 from "md5";
-import { AllHqs, ContainerHq, HomeContainer, Subtitle } from "./styled";
+import {
+  AllHqs,
+  BannerContainer,
+  ContainerHq,
+  ContainerRareHq,
+  HomeContainer,
+  Subtitle,
+} from "./styled";
 
 import React, { useState, useEffect } from "react";
 
 import { Products } from "../../components/Products";
 
-import "swiper/swiper.min.css";
+import { Pagination } from "../../components/Pagination";
+const LIMIT = 12;
+
 export const Home = () => {
   const time = Number(new Date());
   const keyPublic = "dce2bf4d4c777d8ec9437c52278989af";
@@ -18,16 +27,21 @@ export const Home = () => {
   useEffect(() => {
     axios
       .get(
-        `http://gateway.marvel.com/v1/public/comics?ts=${time}&apikey=${keyPublic}&hash=${hash}`
+        `http://gateway.marvel.com/v1/public/comics?ts=${time}&apikey=${keyPublic}&hash=${hash}&offset=24&limit=${LIMIT}`
       )
       .then((response) => {
         setProducts(response.data.data.results);
       })
       .catch((err) => console.log(err));
   }, []);
-  function percentageFunction(array) {
-    return array.length * 0.1;
-  }
+
+  // const percentageArray = (array) => {
+  //   let newArray = [...array];
+  //   return parseInt(newArray.length * 0.1);
+  // };
+  // const percentageItensInArray = (array) => {
+  //   let newArray = [...array];
+  // };
   const shuffleArray = (array) => {
     let newArray = [...array];
     for (let i = newArray.length - 1; i > 0; i--) {
@@ -38,23 +52,32 @@ export const Home = () => {
     return newArray;
   };
 
+  const percentageItens = (array) => {
+    const item = shuffleArray(array);
+    const itensPercentage = Math.round((10 / 100) * item.length);
+    let itensSelected = item.slice(0, itensPercentage);
+    return itensSelected;
+  };
+
   return (
     <HomeContainer>
-      <ContainerHq>
-        <Subtitle>HQ's Raras</Subtitle>
+      <BannerContainer>
+        <ContainerRareHq>
+          <Subtitle>HQ's Raras</Subtitle>
 
-        <AllHqs>
-          {shuffleArray(products).map((product) => (
-            <Products
-              thumbnail={`${product.thumbnail.path}.${product.thumbnail.extension}`}
-              price={product.prices[0].price}
-              title={product.title}
-              id={product.id}
-              key={product.id}
-            />
-          ))}
-        </AllHqs>
-      </ContainerHq>
+          <AllHqs>
+            {percentageItens(products).map((product) => (
+              <Products
+                thumbnail={`${product.thumbnail.path}.${product.thumbnail.extension}`}
+                price={product.prices[0].price}
+                title={product.title}
+                id={product.id}
+                key={product.id}
+              />
+            ))}
+          </AllHqs>
+        </ContainerRareHq>
+      </BannerContainer>
       <ContainerHq>
         <Subtitle> Todos os Hq</Subtitle>
 
@@ -69,6 +92,7 @@ export const Home = () => {
             />
           ))}
         </AllHqs>
+        <Pagination limit={12} total={1200} offset={240} />
       </ContainerHq>
     </HomeContainer>
   );

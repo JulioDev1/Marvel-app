@@ -20,6 +20,7 @@ export const Title = styled.h1`
 export const TitleContainer = styled.div`
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   overflow: hidden;
   display: -webkit-box;
   -webkit-line-clamp: 1;
@@ -27,5 +28,5 @@ export const TitleContainer = styled.div`
   width: 100%;
 `;
 export const InfoContainer = styled.div`
-  margin-top: 14px;
+  margin-top: 5px;
 `;
