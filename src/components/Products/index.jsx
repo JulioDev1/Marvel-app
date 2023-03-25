@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import {
   Poster,
   Price,
@@ -12,7 +13,9 @@ import {
 export const Products = ({ thumbnail, title, price, id }) => {
   return (
     <ProductConteiner key={id}>
-      <Poster src={thumbnail} alt="poster" />
+      <Link to={`/${id}`}>
+        <Poster src={thumbnail} alt="poster" />
+      </Link>
       <InfoContainer>
         <TitleContainer>
           <Title>{title}</Title>

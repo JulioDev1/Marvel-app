@@ -21,7 +21,7 @@ import { Products } from "../../components/Products";
 
 const LIMIT = 24;
 
-export const Home = ({ comicId }) => {
+export const Home = () => {
   const time = Number(new Date());
   const keyPublic = "dce2bf4d4c777d8ec9437c52278989af";
   const keyPrivate = "9f97c6e21f02ab08019f3d859c4d4b5da3188eb0";
@@ -33,17 +33,21 @@ export const Home = ({ comicId }) => {
 
   useEffect(() => {
     const fetchData = async () => {
+      console.log("entrou");
+
       const offset = (page - 1) * LIMIT;
       const response = await axios.get(
         `http://gateway.marvel.com/v1/public/comics?ts=${time}&apikey=${keyPublic}&hash=${hash}&offset=${offset}&limit=${LIMIT}`
       );
-      console.log(response.data.data.results);
+
+      console.log("results", response.data.data.results);
       setProducts(response.data.data.results);
       setTotalPages(Math.ceil(response.data.data.total / LIMIT));
     };
     fetchData();
   }, [page]);
-
+  console.log(hash);
+  useEffect(() => {});
   ////uma requisição para fazer a paginação(confesso que achei essa parte bem difici)
   const handleAddPage = () => {
     setPage(page + 1);

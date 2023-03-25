@@ -5,6 +5,7 @@ export const ListOfProducts = styled.div`
   flex-direction: row;
   margin-top: 20px;
   justify-content: space-around;
-  max-width: 100%;
+  width: 100%;
   max-height: 100%;
+  height: 40rem;
 `;

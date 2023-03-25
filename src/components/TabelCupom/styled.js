@@ -4,7 +4,7 @@ export const Table = styled.div`
   font-family: "Francois One", sans-serif;
   width: 100%;
   max-width: 350px;
-  height: 250px;
+  height: 40rem;
 `;
 export const ButtonCupom = styled.button`
   background-color: #e53a40;

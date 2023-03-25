@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const ProductConteiner = styled.div`
   display: flex;
   flex-direction: column;
+  font-family: "Francois One", sans-serif;
   max-width: 190px;
   max-height: 500px;
 `;
