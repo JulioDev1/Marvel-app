@@ -3,45 +3,55 @@ import md5 from "md5";
 import {
   AllHqs,
   BannerContainer,
+  ButtonContainer,
+  ButtonLeft,
+  ButtonRight,
   ContainerHq,
   ContainerRareHq,
   HomeContainer,
+  PageHq,
   Subtitle,
 } from "./styled";
 
 import React, { useState, useEffect } from "react";
 
+import { Next } from "../../icon/Next";
+
 import { Products } from "../../components/Products";
 
-import { Pagination } from "../../components/Pagination";
-const LIMIT = 12;
+const LIMIT = 24;
 
-export const Home = () => {
+export const Home = ({ comicId }) => {
   const time = Number(new Date());
   const keyPublic = "dce2bf4d4c777d8ec9437c52278989af";
   const keyPrivate = "9f97c6e21f02ab08019f3d859c4d4b5da3188eb0";
   const hash = md5(time + keyPrivate + keyPublic);
 
   const [products, setProducts] = useState([]);
+  const [page, setPage] = useState(1);
+  const [totalPages, setTotalPages] = useState(0);
 
   useEffect(() => {
-    axios
-      .get(
-        `http://gateway.marvel.com/v1/public/comics?ts=${time}&apikey=${keyPublic}&hash=${hash}&offset=24&limit=${LIMIT}`
-      )
-      .then((response) => {
-        setProducts(response.data.data.results);
-      })
-      .catch((err) => console.log(err));
-  }, []);
+    const fetchData = async () => {
+      const offset = (page - 1) * LIMIT;
+      const response = await axios.get(
+        `http://gateway.marvel.com/v1/public/comics?ts=${time}&apikey=${keyPublic}&hash=${hash}&offset=${offset}&limit=${LIMIT}`
+      );
+      console.log(response.data.data.results);
+      setProducts(response.data.data.results);
+      setTotalPages(Math.ceil(response.data.data.total / LIMIT));
+    };
+    fetchData();
+  }, [page]);
 
-  // const percentageArray = (array) => {
-  //   let newArray = [...array];
-  //   return parseInt(newArray.length * 0.1);
-  // };
-  // const percentageItensInArray = (array) => {
-  //   let newArray = [...array];
-  // };
+  ////uma requisição para fazer a paginação(confesso que achei essa parte bem difici)
+  const handleAddPage = () => {
+    setPage(page + 1);
+  };
+  const handlePrevPage = () => {
+    setPage(page - 1);
+  };
+
   const shuffleArray = (array) => {
     let newArray = [...array];
     for (let i = newArray.length - 1; i > 0; i--) {
@@ -58,7 +68,6 @@ export const Home = () => {
     let itensSelected = item.slice(0, itensPercentage);
     return itensSelected;
   };
-
   return (
     <HomeContainer>
       <BannerContainer>
@@ -80,19 +89,28 @@ export const Home = () => {
       </BannerContainer>
       <ContainerHq>
         <Subtitle> Todos os Hq</Subtitle>
-
-        <AllHqs>
-          {products.map((product) => (
-            <Products
-              thumbnail={`${product.thumbnail.path}.${product.thumbnail.extension}`}
-              price={product.prices[0].price}
-              title={product.title}
-              id={product.id}
-              key={product.id}
-            />
-          ))}
-        </AllHqs>
-        <Pagination limit={12} total={1200} offset={240} />
+        <PageHq>
+          <AllHqs>
+            {products.map((product) => (
+              <Products
+                thumbnail={`${product.thumbnail.path}.${product.thumbnail.extension}`}
+                price={product.prices[0].price}
+                title={product.title}
+                id={product.id}
+                key={product.id}
+              />
+            ))}
+          </AllHqs>
+        </PageHq>
+        <ButtonContainer>
+          <ButtonLeft onClick={handlePrevPage} disabled={page === 1}>
+            <Next />
+          </ButtonLeft>
+          <span>{`Page ${page} of ${totalPages}`}</span>
+          <ButtonRight onClick={handleAddPage} disabled={page === totalPages}>
+            <Next />
+          </ButtonRight>
+        </ButtonContainer>
       </ContainerHq>
     </HomeContainer>
   );

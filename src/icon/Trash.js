@@ -1,0 +1,16 @@
+export const Trash = () => {
+  return (
+    <svg
+      width="20"
+      height="20"
+      viewBox="0 0 20 20"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M14 2L12 0H8L6 2H2V4H18V2H14ZM17 6H3L4 20H16L17 6ZM12 8V18H11V8H12ZM9 8V18H8V8H9Z"
+        fill="#F8F8F8"
+      />
+    </svg>
+  );
+};

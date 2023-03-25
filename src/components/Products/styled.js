@@ -3,8 +3,8 @@ import styled from "styled-components";
 export const ProductConteiner = styled.div`
   display: flex;
   flex-direction: column;
-  max-width: 270px;
-  max-height: 400px;
+  max-width: 190px;
+  max-height: 500px;
 `;
 export const Price = styled.h1`
   color: #3ae541;
@@ -29,4 +29,12 @@ export const TitleContainer = styled.div`
 `;
 export const InfoContainer = styled.div`
   margin-top: 5px;
+`;
+export const Button = styled.button`
+  width: 100%;
+  height: 30px;
+  border: none;
+  font-family: "Francois One", sans-serif;
+  color: white;
+  background-color: #e53a40;
 `;

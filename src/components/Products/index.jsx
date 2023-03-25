@@ -6,6 +6,7 @@ import {
   Title,
   InfoContainer,
   TitleContainer,
+  Button,
 } from "./styled";
 
 export const Products = ({ thumbnail, title, price, id }) => {
@@ -17,6 +18,7 @@ export const Products = ({ thumbnail, title, price, id }) => {
           <Title>{title}</Title>
         </TitleContainer>
         <Price>$ {price}</Price>
+        <Button>Adicionar ao Carrinho</Button>
       </InfoContainer>
     </ProductConteiner>
   );
