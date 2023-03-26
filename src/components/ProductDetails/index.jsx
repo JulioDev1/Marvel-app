@@ -11,13 +11,10 @@ import {
 
 export const ProductsDetails = ({ thumbnail, alt, title, price, id }) => {
   return (
-    <ProductContainer>
-      <ProductContent>
-        <PosterLarge src={thumbnail} alt={alt} />
-      </ProductContent>
+    <ProductContainer key={id}>
+      <PosterLarge src={thumbnail} alt={alt} />
       <InfoProduct>
         <Title>{title}</Title>
-
         <ButtonContent>
           <Price>${price}</Price>
           <Button>adicionar ao carrinho</Button>

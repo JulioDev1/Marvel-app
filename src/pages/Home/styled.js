@@ -25,6 +25,10 @@ export const ContainerRareHq = styled.div`
   margin-top: 100px;
   padding: 10px;
   gap: 22px;
+  @media screen and (max-width: 538px) {
+    padding: 20px;
+    width: 250px;
+  }
 `;
 export const BannerContainer = styled.div`
   width: 100%;

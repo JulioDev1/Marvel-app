@@ -1,10 +1,10 @@
 import {
-  ButtonQuantity,
+  CartIcon,
   IconButton,
+  IconQuantity,
   Input,
   LogoMarvel,
   NavBarContainer,
-  Quantity,
   SearchInput,
 } from "./styled";
 import Logo from "../../icon/Marvel-Comics-logo.png";
@@ -14,26 +14,22 @@ import { Link } from "react-router-dom";
 
 export const NavBar = () => {
   return (
-    <div>
-      <NavBarContainer>
-        <Link to="/">
-          <LogoMarvel src={Logo} alt="Logo" />
+    <NavBarContainer>
+      <Link to="/">
+        <LogoMarvel src={Logo} alt="Logo" />
+      </Link>
+      <SearchInput>
+        <Input placeholder="Search for HQ's" />
+        <IconButton>
+          <Search />
+        </IconButton>
+      </SearchInput>
+      <CartIcon>
+        <Link to="/shopping">
+          <Cart />
         </Link>
-        <SearchInput>
-          <Input placeholder="Search for HQ's" />
-          <IconButton>
-            <Search />
-          </IconButton>
-        </SearchInput>
-        <div>
-          <Link to="/shopping">
-            <Cart />
-            <ButtonQuantity>
-              <Quantity>1</Quantity>
-            </ButtonQuantity>
-          </Link>
-        </div>
-      </NavBarContainer>
-    </div>
+        <IconQuantity>1</IconQuantity>
+      </CartIcon>
+    </NavBarContainer>
   );
 };

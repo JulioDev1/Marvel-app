@@ -4,7 +4,16 @@ export const Table = styled.div`
   font-family: "Francois One", sans-serif;
   width: 100%;
   max-width: 350px;
-  height: 40rem;
+  height: 18rem;
+  @media screen and (max-width: 900px) {
+    max-width: 280px;
+    width: 100%;
+    margin-bottom: 90px;
+  }
+  @media screen and (max-width: 820px) {
+    max-width: 320px;
+    width: 100%;
+  }
 `;
 export const ButtonCupom = styled.button`
   background-color: #e53a40;
@@ -13,6 +22,13 @@ export const ButtonCupom = styled.button`
   width: 80px;
   color: white;
   font-family: "Francois One", sans-serif;
+  @media screen and (max-width: 900px) {
+    height: 30px;
+    width: 100%;
+  }
+  @media screen and (max-width: 820px) {
+    width: 100%;
+  }
 `;
 export const ButtonBuy = styled.button`
   width: 100%;
@@ -26,6 +42,16 @@ export const CupomContainer = styled.div`
   width: 350px;
   display: flex;
   gap: 10px;
+  @media screen and (max-width: 900px) {
+    flex-direction: column;
+
+    flex-wrap: wrap;
+    width: 280px;
+  }
+  @media screen and (max-width: 820px) {
+    max-width: 520px;
+    width: 100%;
+  }
 `;
 export const Text = styled.h1`
   color: white;
@@ -54,4 +80,7 @@ export const InfoProductsContainer = styled.div`
   width: 100%;
   margin-top: 10px;
   padding: 10px;
+  @media screen and (max-width: 900px) {
+    height: 200px;
+  }
 `;
