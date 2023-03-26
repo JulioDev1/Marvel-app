@@ -19,6 +19,7 @@ import { Next } from "../../icon/Next";
 
 import { Products } from "../../components/Products";
 
+import { useCart } from "../../context/CartContext";
 const LIMIT = 24;
 
 export const Home = () => {
@@ -31,22 +32,22 @@ export const Home = () => {
   const [page, setPage] = useState(1);
   const [totalPages, setTotalPages] = useState(0);
 
+  const { addProduct } = useCart();
+
   useEffect(() => {
     const fetchData = async () => {
-      console.log("entrou");
-
       const offset = (page - 1) * LIMIT;
+
       const response = await axios.get(
         `http://gateway.marvel.com/v1/public/comics?ts=${time}&apikey=${keyPublic}&hash=${hash}&offset=${offset}&limit=${LIMIT}`
       );
 
-      console.log("results", response.data.data.results);
       setProducts(response.data.data.results);
       setTotalPages(Math.ceil(response.data.data.total / LIMIT));
     };
     fetchData();
   }, [page]);
-  console.log(hash);
+
   useEffect(() => {});
   ////uma requisição para fazer a paginação(confesso que achei essa parte bem difici)
   const handleAddPage = () => {
@@ -72,6 +73,7 @@ export const Home = () => {
     let itensSelected = item.slice(0, itensPercentage);
     return itensSelected;
   };
+
   return (
     <HomeContainer>
       <BannerContainer>
@@ -86,6 +88,7 @@ export const Home = () => {
                 title={product.title}
                 id={product.id}
                 key={product.id}
+                onClick={() => addProduct(product)}
               />
             ))}
           </AllHqs>

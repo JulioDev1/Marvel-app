@@ -15,22 +15,14 @@ export const ComicDetail = () => {
   let hash = md5(time + keyPrivate + keyPublic);
 
   useEffect(() => {
-    console.log("entrou");
     const fetchComic = async () => {
       const response = await axios.get(
         `http://gateway.marvel.com/v1/public/comics/${id}?ts=${time}&apikey=${keyPublic}&hash=${hash}`
       );
-      console.log("results", response.status);
       setComic(response.data.data.results[0]);
     };
     fetchComic();
   }, []);
-  console.log(id);
-  console.log(
-    `http://gateway.marvel.com/v1/public/comics/${id}?ts=${time}&apikey=${keyPublic}&hash=${hash}`
-  );
-  console.log("comic", comic);
-
   return (
     <ComicContainer>
       {comic ? (

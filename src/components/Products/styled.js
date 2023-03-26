@@ -34,6 +34,7 @@ export const InfoContainer = styled.div`
 export const Button = styled.button`
   width: 100%;
   height: 30px;
+  cursor: pointer;
   border: none;
   font-family: "Francois One", sans-serif;
   color: white;

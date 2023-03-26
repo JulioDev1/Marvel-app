@@ -7,7 +7,7 @@ export const Next = () => {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <g clip-path="url(#clip0_30_7)">
+      <g clipPath="url(#clip0_30_7)">
         <path
           d="M40 24L34.36 29.64L52.68 48L34.36 66.36L40 72L64 48L40 24Z"
           fill="white"

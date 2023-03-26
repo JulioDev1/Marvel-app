@@ -25,7 +25,7 @@ export const TabelCupom = () => {
           <Text>Price:12-R$</Text>
         </PriceContent>
         <TextTotal>Total: 15R$</TextTotal>
-        <ButtonBuy>Aplicar Cupom</ButtonBuy>
+        <ButtonBuy></ButtonBuy>
       </InfoProductsContainer>
     </Table>
   );
