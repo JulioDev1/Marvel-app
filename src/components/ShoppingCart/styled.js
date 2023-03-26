@@ -48,4 +48,6 @@ export const ImageSimulated = styled.img`
 `;
 export const Button = styled.button`
   height: 2rem;
+  background-color: #e53a40;
+  border: none;
 `;

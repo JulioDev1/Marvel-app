@@ -1,3 +1,4 @@
+import { useCart } from "../../context/Context";
 import {
   ButtonBuy,
   ButtonCupom,
@@ -11,21 +12,21 @@ import {
 } from "./styled";
 
 export const TabelCupom = () => {
+  const { total } = useCart();
   return (
     <Table>
       <Text>Cupom</Text>
 
       <CupomContainer>
         <Input type="text" placeholder="Inserir Cupom" />
-        <ButtonCupom>Comprar</ButtonCupom>
+        <ButtonCupom>Aplicar Cupom</ButtonCupom>
       </CupomContainer>
       <InfoProductsContainer>
         <PriceContent>
-          <Text>Quantity:24-R$</Text>
-          <Text>Price:12-R$</Text>
+          <Text>Quantidade:-</Text>
+          <Text>Preço total:{total}-R$</Text>
         </PriceContent>
-        <TextTotal>Total: 15R$</TextTotal>
-        <ButtonBuy></ButtonBuy>
+        <ButtonBuy>Comprar</ButtonBuy>
       </InfoProductsContainer>
     </Table>
   );

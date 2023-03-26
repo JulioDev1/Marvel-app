@@ -1,5 +1,6 @@
 import { Trash } from "../../icon/Trash";
 import {
+  Button,
   ElementPage,
   ImageSimulated,
   InfoContent,
@@ -20,9 +21,9 @@ export const ShoppingCart = ({ thumbnail, title, price, id, onClick }) => {
             <ProductName>{title}</ProductName>
             <Price>{price}</Price>
           </InfoContent>
-          <button onClick={onClick}>
+          <Button onClick={onClick}>
             <Trash />
-          </button>
+          </Button>
         </ElementPage>
       </ProductPage>
     </ProductListContainer>

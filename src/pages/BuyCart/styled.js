@@ -15,3 +15,7 @@ export const ListOfProducts = styled.div`
     align-items: center;
   }
 `;
+export const ProductContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
