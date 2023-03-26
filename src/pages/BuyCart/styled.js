@@ -7,6 +7,7 @@ export const ListOfProducts = styled.div`
   justify-content: space-around;
   width: 100%;
   max-height: 100%;
+  height: 400px;
   gap: 10px;
   height: 40rem;
   @media screen and (max-width: 820px) {

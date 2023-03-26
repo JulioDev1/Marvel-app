@@ -1,6 +1,5 @@
 import {
   PosterLarge,
-  ProductContent,
   ProductContainer,
   Title,
   InfoProduct,

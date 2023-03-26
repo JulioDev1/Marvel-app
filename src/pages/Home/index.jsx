@@ -19,7 +19,7 @@ import { Next } from "../../icon/Next";
 
 import { Products } from "../../components/Products";
 
-import { useCart } from "../../context/CartContext";
+import { useCart } from "../../context/Context";
 const LIMIT = 24;
 
 export const Home = () => {

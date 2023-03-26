@@ -6,7 +6,6 @@ export const CartContext = createContext();
 export const CartProvider = ({ children }) => {
   const [cart, setCart] = useState([]);
   const [total, setTotal] = useState(0);
-
   const addProduct = (comic) => {
     setCart([...cart, comic]);
     setTotal(total + parseFloat(comic.prices[0].price));
@@ -14,13 +13,12 @@ export const CartProvider = ({ children }) => {
 
   const removeProduct = (comic) => {
     setCart(cart.filter((item) => item.id !== comic.id));
-    setTotal(total + parseFloat(comic.price[0].price));
+    setTotal(total - parseFloat(comic.prices[0].price));
   };
 
-  console.log("carrinho", cart);
-
+  console.log("produto", cart);
   return (
-    <CartContext.Provider value={{ cart, addProduct, removeProduct }}>
+    <CartContext.Provider value={{ cart, addProduct, removeProduct, total }}>
       {children}
     </CartContext.Provider>
   );

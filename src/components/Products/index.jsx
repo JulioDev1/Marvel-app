@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { useCart } from "../../context/CartContext";
 import {
   Poster,
   Price,
@@ -11,9 +10,7 @@ import {
   Button,
 } from "./styled";
 
-export const Products = ({ thumbnail, title, price, id }) => {
-  const { addProduct } = useCart();
-
+export const Products = ({ thumbnail, title, price, id, onClick }) => {
   return (
     <ProductConteiner key={id}>
       <Link to={`/${id}`}>
@@ -24,7 +21,7 @@ export const Products = ({ thumbnail, title, price, id }) => {
           <Title>{title}</Title>
         </TitleContainer>
         <Price>R$ {price}</Price>
-        <Button>Adicionar ao Carrinho</Button>
+        <Button onClick={onClick}>Adicionar ao Carrinho</Button>
       </InfoContainer>
     </ProductConteiner>
   );

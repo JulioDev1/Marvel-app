@@ -42,8 +42,10 @@ export const InfoContent = styled.div`
   display: flex;
   flex-direction: column;
 `;
-export const ImageSimulated = styled.div`
+export const ImageSimulated = styled.img`
   width: 117px;
   height: 156px;
-  background-color: white;
+`;
+export const Button = styled.button`
+  height: 2rem;
 `;

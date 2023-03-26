@@ -1,11 +1,19 @@
 import { ShoppingCart } from "../../components/ShoppingCart";
 import { TabelCupom } from "../../components/TabelCupom";
 import { ListOfProducts } from "./styled";
-
+import { useCart } from "../../context/Context";
 export const BuyCart = () => {
+  const { removeProduct, cart } = useCart();
   return (
     <ListOfProducts>
-      <ShoppingCart />
+      {cart.map((item) => (
+        <ShoppingCart
+          thumbnail={`${item.thumbnail.path}.${item.thumbnail.extension}`}
+          title={item.title}
+          price={item.price}
+          id={item.id}
+        />
+      ))}
       <TabelCupom />
     </ListOfProducts>
   );

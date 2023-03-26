@@ -8,21 +8,21 @@ import {
   ProductName,
   ProductPage,
   Title,
-  Total,
 } from "./styled";
 
-export const ShoppingCart = () => {
+export const ShoppingCart = ({ thumbnail, title, price, id, onClick }) => {
   return (
-    <ProductListContainer>
-      <Title>Product on the no Cart</Title>
+    <ProductListContainer key={id}>
       <ProductPage>
-        <ImageSimulated></ImageSimulated>
+        <ImageSimulated src={thumbnail} alt="imagem" />
         <ElementPage>
           <InfoContent>
-            <ProductName>NameProduct</ProductName>
-            <Price>15 R$</Price>
+            <ProductName>{title}</ProductName>
+            <Price>{price}</Price>
           </InfoContent>
-          <Trash />
+          <button onClick={onClick}>
+            <Trash />
+          </button>
         </ElementPage>
       </ProductPage>
     </ProductListContainer>
