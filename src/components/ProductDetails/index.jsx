@@ -1,3 +1,4 @@
+import { useCart } from "../../context/Context";
 import {
   PosterLarge,
   ProductContainer,
@@ -8,7 +9,15 @@ import {
   Price,
 } from "./styled";
 
-export const ProductsDetails = ({ thumbnail, alt, title, price, id }) => {
+export const ProductsDetails = ({
+  thumbnail,
+  alt,
+  title,
+  price,
+  id,
+  onClick,
+}) => {
+  const { addProduct } = useCart();
   return (
     <ProductContainer key={id}>
       <PosterLarge src={thumbnail} alt={alt} />
@@ -16,7 +25,7 @@ export const ProductsDetails = ({ thumbnail, alt, title, price, id }) => {
         <Title>{title}</Title>
         <ButtonContent>
           <Price>${price}</Price>
-          <Button>adicionar ao carrinho</Button>
+          <Button onClick={onClick}>adicionar ao carrinho</Button>
         </ButtonContent>
       </InfoProduct>
     </ProductContainer>

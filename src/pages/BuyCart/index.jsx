@@ -11,7 +11,7 @@ export const BuyCart = () => {
           <ShoppingCart
             thumbnail={`${item.thumbnail.path}.${item.thumbnail.extension}`}
             title={item.title}
-            price={item.price}
+            price={item.prices[0].price}
             id={item.id}
             onClick={() => removeProduct(item)}
           />
