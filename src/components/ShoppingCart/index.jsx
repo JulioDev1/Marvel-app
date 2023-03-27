@@ -8,7 +8,6 @@ import {
   ProductListContainer,
   ProductName,
   ProductPage,
-  Title,
 } from "./styled";
 
 export const ShoppingCart = ({ thumbnail, title, price, id, onClick }) => {

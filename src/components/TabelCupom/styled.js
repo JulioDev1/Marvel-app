@@ -46,7 +46,7 @@ export const CupomContainer = styled.div`
     flex-direction: column;
 
     flex-wrap: wrap;
-    width: 280px;
+    width: 500px;
   }
   @media screen and (max-width: 820px) {
     max-width: 520px;

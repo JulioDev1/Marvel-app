@@ -27,6 +27,13 @@ export const ProductContainer = styled.div`
     width: 20rem;
     padding: 20px;
   }
+  @media screen and (max-width: 300px) {
+    flex-direction: column;
+    align-items: center;
+    width: 20rem;
+    justify-content: center;
+    height: 26rem;
+  }
 `;
 
 export const ButtonContent = styled.div`

@@ -6,7 +6,7 @@ export const ListOfProducts = styled.div`
   justify-content: space-around;
   width: 100%;
   max-height: 100%;
-  height: 400px;
+  height: 200px;
   box-sizing: border-box;
   gap: 10px;
   height: 40rem;
@@ -18,4 +18,17 @@ export const ListOfProducts = styled.div`
 export const ProductContainer = styled.div`
   display: flex;
   flex-direction: column;
+  height: 300px;
+  overflow-y: auto;
+  ::-webkit-scrollbar {
+    background-color: rgb(19, 20, 21);
+    width: 10px;
+    border-radius: 10px;
+  }
+  ::-webkit-scrollbar-button {
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color: rgb(229, 58, 64);
+    height: 10px;
+  }
 `;

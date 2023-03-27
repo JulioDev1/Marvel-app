@@ -1,7 +1,6 @@
 import {
   CartIcon,
   IconButton,
-  IconQuantity,
   Input,
   LogoMarvel,
   NavBarContainer,
@@ -11,9 +10,7 @@ import Logo from "../../icon/Marvel-Comics-logo.png";
 import { Search } from "../../icon/Search";
 import { Cart } from "../../icon/Cart";
 import { Link } from "react-router-dom";
-import { useCart } from "../../context/Context";
 export const NavBar = () => {
-  const { quantity } = useCart();
   return (
     <NavBarContainer>
       <Link to="/">

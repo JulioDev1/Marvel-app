@@ -105,6 +105,7 @@ export const Home = () => {
                 title={product.title}
                 id={product.id}
                 key={product.id}
+                onClick={() => addProduct(product)}
               />
             ))}
           </AllHqs>

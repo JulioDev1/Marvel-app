@@ -17,7 +17,6 @@ export const ProductsDetails = ({
   id,
   onClick,
 }) => {
-  const { addProduct } = useCart();
   return (
     <ProductContainer key={id}>
       <PosterLarge src={thumbnail} alt={alt} />

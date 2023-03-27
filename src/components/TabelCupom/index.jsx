@@ -8,7 +8,6 @@ import {
   PriceContent,
   Table,
   Text,
-  TextTotal,
 } from "./styled";
 
 export const TabelCupom = () => {
@@ -23,7 +22,6 @@ export const TabelCupom = () => {
       </CupomContainer>
       <InfoProductsContainer>
         <PriceContent>
-          <Text>Quantidade:-</Text>
           <Text>Preço total:{total}-R$</Text>
         </PriceContent>
         <ButtonBuy>Comprar</ButtonBuy>

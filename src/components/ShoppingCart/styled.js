@@ -17,7 +17,7 @@ export const ElementPage = styled.div`
 `;
 export const ProductListContainer = styled.div`
   font-family: "Francois One", sans-serif;
-  height: 15.5rem;
+  height: 100%;
   max-width: 500px;
   width: 100%;
   border-bottom: 2px solid white;

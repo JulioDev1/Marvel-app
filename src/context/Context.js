@@ -6,7 +6,6 @@ export const CartContext = createContext();
 export const CartProvider = ({ children }) => {
   const [cart, setCart] = useState([]);
   const [total, setTotal] = useState(0);
-  const [quantity, setQuantity] = useState(0);
   const addProduct = (comic) => {
     setCart([...cart, comic]);
     setTotal(total + parseFloat(comic.prices[0].price));
