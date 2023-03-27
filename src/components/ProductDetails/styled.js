@@ -49,6 +49,7 @@ export const Button = styled.button`
   font-family: "Francois One", sans-serif;
   color: white;
   width: 100%;
+  cursor: pointer;
   height: 3rem;
 `;
 

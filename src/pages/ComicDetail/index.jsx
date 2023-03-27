@@ -24,7 +24,7 @@ export const ComicDetail = () => {
       setComic(response.data.data.results[0]);
     };
     fetchComic();
-  }, []);
+  });
   return (
     <ComicContainer>
       {comic ? (

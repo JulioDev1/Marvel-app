@@ -1,4 +1,3 @@
-import { useCart } from "../../context/Context";
 import {
   PosterLarge,
   ProductContainer,
