@@ -28,9 +28,13 @@ sinto que faltaram funções que não pude implementar devido a falta de tempo, 
 Tecnologias Usadas:
 
 React Router (rooteamento de paginas e abrir o produto/hq pelo id
+
 React como biblioteca e ambiente de desenvolvimento
+
 styled-components como uso de javascript no css
+
 context-api para adicionar os produtos no carrinho através de um state global
+
 biblioteca md5 para fazer diretamente os cálculos da criptografia da url
 
 Deploy 
