@@ -14,4 +14,4 @@ Manipulação de rotas da api
 
 Ideia de Layout
 
-# o layout foi totalmente implementado por mim, e usei o figma para ficar mais fácil uma projeção de resultado do layout.
+#o layout foi totalmente implementado por mim, e usei o figma para ficar mais fácil uma projeção de resultado do layout.
