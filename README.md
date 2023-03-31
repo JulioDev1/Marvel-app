@@ -1,5 +1,7 @@
 # Marvel-app
-app de compras de HQ's
+
+app de compras de HQ's 
+
 Comentário gerais sobre desenvolvimento desse App
 
 Manipulação de rotas da api
