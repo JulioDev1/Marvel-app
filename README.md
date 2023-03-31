@@ -8,6 +8,8 @@ app de compras de HQ's
 
 ![image](https://user-images.githubusercontent.com/87501956/229182094-8ec85566-b18c-47a7-bca2-4b0741a91c3b.png)
 
+![image](https://user-images.githubusercontent.com/87501956/229182582-9cf118f0-c43e-428e-8baf-f9fb8d2b8edd.png)
+
 
 Comentário gerais sobre desenvolvimento desse App
 
@@ -33,8 +35,9 @@ biblioteca md5 para fazer diretamente os cálculos da criptografia da url
 
 Deploy 
 
-estou com problemas que pretendo resolver a respeito do deploy, o erro é o não carregamento de dados por vias de dúvidas deixarei print da aplicação funcionando atráves do yarn start.
+estou com problemas que pretendo resolver a respeito do deploy, o erro é o não carregamento de dados por, via de dúvidas deixarei print da aplicação funcionando atráves do yarn start.
 
+link do do app:https://marvel-app-lime.vercel.app
 
 Ideia de Layout
 
