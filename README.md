@@ -10,7 +10,7 @@ Manipulação de rotas da api
 
  Estratégia para criar o carrinho de compras
 
-#Havia any formas de fazer isso, no desafio aconselhavam usar o redux já que a biblioteca serve justamente para o compartilhamento de dados globais, no entanto optei por usar o contextAPI já que eu não teria tanto tempo para ficar lendo a documentação durante o processo, e com context eu já tenho um breve conhecimento, então seria mais fácil usar o state global que ele disponibilizava, nesse desáfio pude melhorar muito meus conhecimentos com ele a propósito.
+#Havia any formas de fazer isso, no desafio aconselhavam usar o redux já que a biblioteca serve justamente para o compartilhamento de dados globais, no entanto optei por usar o contextAPI já que eu não teria tanto tempo para ficar lendo a documentação durante o processo, e com context eu já tenho um breve conhecimento, então seria mais fácil usar o state global que ele disponibilizava, nesse desafio pude melhorar muito meus conhecimentos com ele a propósito.
 
 
 
