@@ -15,7 +15,7 @@ Comentário gerais sobre desenvolvimento desse App
 
 Manipulação de rotas da api
 
-#Foi totalmente inovador para mim já que api apresentava um esquema de criptografia para fazer as requisições, no caso com chave publica, privada, hash e um md5 entre esses 3,  confesso que isso me deu um pouco de dor de cabeça já que nunca sequer tive contato com isso principalmente na parte de exibir o produto devido ao fato de que requisição de mostrar produto por id precisava de um tela de carregamento, como não estava usando next.js eu optei por usar como recurso ao meu a favor o react-router para o roteamento entre a página home e produto e o seu custom hook useParams() que me ajudou a mostrar a product page em tela através do id,
+#Foi totalmente inovador para mim já que api apresentava um esquema de criptografia para fazer as requisições, no caso com chave pública, privada, hash e um md5 entre esses 3,  confesso que isso me deu um pouco de dor de cabeça já que nunca sequer tive contato com isso principalmente na parte de exibir o produto, devido ao fato de que a requisição de mostrar produto por id precisava de uma tela de carregamento, como não estava usando next.js eu optei por usar como recurso ao meu a favor o react-router para o roteamento entre as páginas home e produto e o seu custom hook useParams() que me ajudou a mostrar a product page em tela através do id.
 
  Estratégia para criar o carrinho de compras
 
@@ -23,7 +23,7 @@ Manipulação de rotas da api
 
 Futura implementações
 
-sinto que faltaram funções que não pude implementar devido a falta de tempo, uma delas e reduzir o numero de casas decimais no calculo de preço total e arrumar o bug do mesmo, e implementar a função de busca.
+sinto que faltaram funções que não pude implementar devido a falta de tempo, uma delas e reduzir o número de casas decimais no cálculo de preço total , arrumar o bug do mesmo, e implementar a função de busca.
 
 Tecnologias Usadas:
 
@@ -39,10 +39,10 @@ biblioteca md5 para fazer diretamente os cálculos da criptografia da url
 
 Deploy 
 
-estou com problemas que pretendo resolver a respeito do deploy, o erro é o não carregamento de dados por, via de dúvidas deixarei print da aplicação funcionando atráves do yarn start.
+estou com problemas que pretendo resolver a respeito do deploy, o erro é o não carregamento de dados por via de dúvidas deixarei print da aplicação funcionando atráves do yarn start.
 
 link do do app:https://marvel-app-lime.vercel.app
 
 Ideia de Layout
 
-#o layout foi totalmente implementado por mim, e usei o figma para ficar mais fácil uma projeção de resultado do layout.
+#o layout foi totalmente implementado por mim, eu usei o figma para ficar mais fácil uma projeção de resultado do layout.
